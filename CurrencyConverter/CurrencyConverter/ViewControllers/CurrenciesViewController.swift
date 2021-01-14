@@ -17,7 +17,6 @@ class CurrenciesViewController: UIViewController {
         super.viewDidLoad()
         currencyTableView.register(CurrenciesTableViewCell.nib(), forCellReuseIdentifier: CurrenciesTableViewCell.identifier)
         self.currencyTableView.delegate = self
-        self.currencyTableView.separatorStyle = .none
         loadFiles()
     }
     
@@ -41,7 +40,7 @@ extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
         return currencies.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 158
+        return 60
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CurrenciesTableViewCell.identifier, for: indexPath) as! CurrenciesTableViewCell
