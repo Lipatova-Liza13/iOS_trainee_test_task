@@ -17,6 +17,7 @@
 		FAD3C94525B052FB00F82650 /* Converter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD3C94325B052FB00F82650 /* Converter.storyboard */; };
 		FAD3C96025B05C9E00F82650 /* CurrenciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C95E25B05C9E00F82650 /* CurrenciesTableViewCell.swift */; };
 		FAD3C96125B05C9E00F82650 /* CurrenciesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3C95F25B05C9E00F82650 /* CurrenciesTableViewCell.xib */; };
+		FAD3C96625B062D200F82650 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C96525B062D200F82650 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FAD3C94425B052FB00F82650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CurrencyConverter/Assets/Storyboards/Base.lproj/Converter.storyboard; sourceTree = "<group>"; };
 		FAD3C95E25B05C9E00F82650 /* CurrenciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewCell.swift; sourceTree = "<group>"; };
 		FAD3C95F25B05C9E00F82650 /* CurrenciesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrenciesTableViewCell.xib; sourceTree = "<group>"; };
+		FAD3C96525B062D200F82650 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		FAD3C93625AF9CBF00F82650 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3C96525B062D200F82650 /* Currency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD3C96625B062D200F82650 /* Currency.swift in Sources */,
 				FAD3C90225AF9BF800F82650 /* AppDelegate.swift in Sources */,
 				FAD3C90425AF9BF800F82650 /* SceneDelegate.swift in Sources */,
 				FAD3C96025B05C9E00F82650 /* CurrenciesTableViewCell.swift in Sources */,
