@@ -19,5 +19,10 @@ class CurrenciesTableViewCell: UITableViewCell {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
     
-    
+    var setCurrencies: Currency! {
+        didSet {
+            currencyLabel.text = setCurrencies.currencyName
+            rateLabel.text = String(setCurrencies.rate)
+        }
+    }
 }

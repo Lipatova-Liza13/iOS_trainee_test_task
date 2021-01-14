@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Currency {
+struct Currency: Codable {
     let currencyName: String
-    let rate: String
+    let rate: Float
+    
+    enum CodingKeys: String, CodingKey {
+        case currencyName = "cc"
+        case rate
+    }
 }

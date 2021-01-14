@@ -18,6 +18,8 @@
 		FAD3C96025B05C9E00F82650 /* CurrenciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C95E25B05C9E00F82650 /* CurrenciesTableViewCell.swift */; };
 		FAD3C96125B05C9E00F82650 /* CurrenciesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3C95F25B05C9E00F82650 /* CurrenciesTableViewCell.xib */; };
 		FAD3C96625B062D200F82650 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C96525B062D200F82650 /* Currency.swift */; };
+		FAD3C96B25B0642400F82650 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C96A25B0642400F82650 /* CurrenciesViewController.swift */; };
+		FAD3C97125B0695100F82650 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C97025B0695100F82650 /* Provider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		FAD3C95E25B05C9E00F82650 /* CurrenciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewCell.swift; sourceTree = "<group>"; };
 		FAD3C95F25B05C9E00F82650 /* CurrenciesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrenciesTableViewCell.xib; sourceTree = "<group>"; };
 		FAD3C96525B062D200F82650 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		FAD3C96A25B0642400F82650 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
+		FAD3C97025B0695100F82650 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		FAD3C90025AF9BF800F82650 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3C96F25B0694300F82650 /* Provider */,
 				FAD3C93725AF9CD100F82650 /* App */,
 				FAD3C93625AF9CBF00F82650 /* Models */,
 				FAD3C93525AF9CAB00F82650 /* Views */,
@@ -136,6 +141,7 @@
 		FAD3C93425AF9C9000F82650 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3C96A25B0642400F82650 /* CurrenciesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +189,14 @@
 				FAD3C94325B052FB00F82650 /* Converter.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FAD3C96F25B0694300F82650 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3C97025B0695100F82650 /* Provider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD3C96B25B0642400F82650 /* CurrenciesViewController.swift in Sources */,
 				FAD3C96625B062D200F82650 /* Currency.swift in Sources */,
 				FAD3C90225AF9BF800F82650 /* AppDelegate.swift in Sources */,
 				FAD3C90425AF9BF800F82650 /* SceneDelegate.swift in Sources */,
+				FAD3C97125B0695100F82650 /* Provider.swift in Sources */,
 				FAD3C96025B05C9E00F82650 /* CurrenciesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
