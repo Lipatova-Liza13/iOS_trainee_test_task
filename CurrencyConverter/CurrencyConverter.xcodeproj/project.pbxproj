@@ -14,6 +14,7 @@
 		FAD3C90E25AF9BFC00F82650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD3C90C25AF9BFC00F82650 /* LaunchScreen.storyboard */; };
 		FAD3C91925AF9BFC00F82650 /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C91825AF9BFC00F82650 /* CurrencyConverterTests.swift */; };
 		FAD3C92425AF9BFD00F82650 /* CurrencyConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C92325AF9BFD00F82650 /* CurrencyConverterUITests.swift */; };
+		FAD3C94525B052FB00F82650 /* Converter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD3C94325B052FB00F82650 /* Converter.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FAD3C91F25AF9BFD00F82650 /* CurrencyConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD3C92325AF9BFD00F82650 /* CurrencyConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterUITests.swift; sourceTree = "<group>"; };
 		FAD3C92525AF9BFD00F82650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD3C94425B052FB00F82650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CurrencyConverter/Assets/Storyboards/Base.lproj/Converter.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD3C90025AF9BF800F82650 /* CurrencyConverter */,
+				FAD3C90F25AF9BFC00F82650 /* Info.plist */,
 				FAD3C91725AF9BFC00F82650 /* CurrencyConverterTests */,
 				FAD3C92225AF9BFD00F82650 /* CurrencyConverterUITests */,
 				FAD3C8FF25AF9BF800F82650 /* Products */,
@@ -101,10 +104,7 @@
 				FAD3C93625AF9CBF00F82650 /* Models */,
 				FAD3C93525AF9CAB00F82650 /* Views */,
 				FAD3C93425AF9C9000F82650 /* ViewControllers */,
-				FAD3C90725AF9BF800F82650 /* Main.storyboard */,
-				FAD3C90A25AF9BFC00F82650 /* Assets.xcassets */,
-				FAD3C90C25AF9BFC00F82650 /* LaunchScreen.storyboard */,
-				FAD3C90F25AF9BFC00F82650 /* Info.plist */,
+				FAD3C93E25B0511800F82650 /* Assets */,
 			);
 			path = CurrencyConverter;
 			sourceTree = "<group>";
@@ -155,6 +155,25 @@
 				FAD3C90325AF9BF800F82650 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		FAD3C93E25B0511800F82650 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3C90A25AF9BFC00F82650 /* Assets.xcassets */,
+				FAD3C93F25B0513F00F82650 /* Storyboards */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FAD3C93F25B0513F00F82650 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3C90C25AF9BFC00F82650 /* LaunchScreen.storyboard */,
+				FAD3C90725AF9BF800F82650 /* Main.storyboard */,
+				FAD3C94325B052FB00F82650 /* Converter.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +282,7 @@
 				FAD3C90E25AF9BFC00F82650 /* LaunchScreen.storyboard in Resources */,
 				FAD3C90B25AF9BFC00F82650 /* Assets.xcassets in Resources */,
 				FAD3C90925AF9BF800F82650 /* Main.storyboard in Resources */,
+				FAD3C94525B052FB00F82650 /* Converter.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +358,14 @@
 				FAD3C90D25AF9BFC00F82650 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAD3C94325B052FB00F82650 /* Converter.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAD3C94425B052FB00F82650 /* Base */,
+			);
+			name = Converter.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -465,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,7 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
