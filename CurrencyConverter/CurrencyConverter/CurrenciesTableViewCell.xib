@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="CurrenciesTableViewCell" customModule="CurrencyConverter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-Y0-FEl" userLabel="currencyLabel">
+                        <rect key="frame" x="20" y="12" width="134" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="134" id="Q26-KQ-fNE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFM-Ur-riA" userLabel="rateLabel">
+                        <rect key="frame" x="193" y="12" width="110" height="37"/>
+                        <accessibility key="accessibilityConfiguration" identifier="rateLabel" label="rateLabel"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="8Ri-n5-X7T"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HFM-Ur-riA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="XGu-Xi-AIz"/>
+                    <constraint firstItem="eZX-Y0-FEl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="bug-Ld-TNp"/>
+                    <constraint firstAttribute="trailing" secondItem="HFM-Ur-riA" secondAttribute="trailing" constant="17" id="ccD-aZ-hWC"/>
+                    <constraint firstAttribute="bottom" secondItem="HFM-Ur-riA" secondAttribute="bottom" constant="11" id="dhx-6y-qzT"/>
+                    <constraint firstItem="eZX-Y0-FEl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nhw-az-aJz"/>
+                    <constraint firstAttribute="bottom" secondItem="eZX-Y0-FEl" secondAttribute="bottom" constant="14" id="wpn-yv-SZj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="currencyLabel" destination="eZX-Y0-FEl" id="N7K-An-ApB"/>
+                <outlet property="rateLabel" destination="HFM-Ur-riA" id="1g7-Gk-7Wh"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="55.580357142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
