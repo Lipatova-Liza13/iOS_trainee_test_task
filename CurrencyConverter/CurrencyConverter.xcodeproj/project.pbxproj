@@ -101,7 +101,6 @@
 				FAD3C93625AF9CBF00F82650 /* Models */,
 				FAD3C93525AF9CAB00F82650 /* Views */,
 				FAD3C93425AF9C9000F82650 /* ViewControllers */,
-				FAD3C90725AF9BF800F82650 /* Main.storyboard */,
 				FAD3C90A25AF9BFC00F82650 /* Assets.xcassets */,
 				FAD3C90C25AF9BFC00F82650 /* LaunchScreen.storyboard */,
 				FAD3C90F25AF9BFC00F82650 /* Info.plist */,
@@ -137,6 +136,7 @@
 		FAD3C93525AF9CAB00F82650 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3C90725AF9BF800F82650 /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
