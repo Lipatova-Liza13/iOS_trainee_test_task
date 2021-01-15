@@ -20,6 +20,7 @@
 		FAD3C96625B062D200F82650 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C96525B062D200F82650 /* Currency.swift */; };
 		FAD3C96B25B0642400F82650 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C96A25B0642400F82650 /* CurrenciesViewController.swift */; };
 		FAD3C97125B0695100F82650 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C97025B0695100F82650 /* Provider.swift */; };
+		FAD3C98225B0ED7600F82650 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C98125B0ED7600F82650 /* ConverterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FAD3C96525B062D200F82650 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		FAD3C96A25B0642400F82650 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
 		FAD3C97025B0695100F82650 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		FAD3C98125B0ED7600F82650 /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD3C96A25B0642400F82650 /* CurrenciesViewController.swift */,
+				FAD3C98125B0ED7600F82650 /* ConverterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				FAD3C90225AF9BF800F82650 /* AppDelegate.swift in Sources */,
 				FAD3C90425AF9BF800F82650 /* SceneDelegate.swift in Sources */,
 				FAD3C97125B0695100F82650 /* Provider.swift in Sources */,
+				FAD3C98225B0ED7600F82650 /* ConverterViewController.swift in Sources */,
 				FAD3C96025B05C9E00F82650 /* CurrenciesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

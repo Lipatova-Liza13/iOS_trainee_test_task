@@ -11,7 +11,7 @@
         <!--Converter-->
         <scene sceneID="Vl2-m9-QV2">
             <objects>
-                <viewController id="VLp-wA-V08" sceneMemberID="viewController">
+                <viewController id="VLp-wA-V08" customClass="ConverterViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F6F-II-qza">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,14 @@
                     <navigationItem key="navigationItem" title="Converter" id="iNf-Nv-cjI">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mcV-yO-dVw"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="changedAmountTextField" destination="aSI-6K-HLW" id="D90-1L-DD1"/>
+                        <outlet property="endCurrencyLabel" destination="Oao-IG-n3R" id="V3q-6H-Jxh"/>
+                        <outlet property="endCurrencyPickerView" destination="x54-7i-NgB" id="umj-dE-BgG"/>
+                        <outlet property="startAmountTextField" destination="M9l-nk-nSn" id="jbZ-jw-zyo"/>
+                        <outlet property="startCurrencyLabel" destination="0dc-7G-jua" id="2PP-Qh-coM"/>
+                        <outlet property="startCurrencyPickerView" destination="Ygp-Uc-Uzt" id="Pel-4Z-0AI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaI-3Z-hGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
