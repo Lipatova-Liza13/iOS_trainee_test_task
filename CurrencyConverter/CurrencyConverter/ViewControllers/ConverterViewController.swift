@@ -14,7 +14,7 @@ class ConverterViewController: UIViewController {
     @IBOutlet weak var startCurrencyLabel: UILabel!
     @IBOutlet weak var endCurrencyLabel: UILabel!
     @IBOutlet weak var startAmountTextField: UITextField!
-    @IBOutlet weak var changedAmountTextField: UILabel!
+    @IBOutlet weak var changedAmountLabel: UILabel!
     var currencies = [Currency]()
     
     override func viewDidLoad() {
@@ -24,6 +24,7 @@ class ConverterViewController: UIViewController {
         self.startCurrencyPickerView.dataSource = self
         self.endCurrencyPickerView.delegate = self
         self.endCurrencyPickerView.dataSource = self
+        self.startAmountTextField.delegate = self
     }
     
     private func loadFiles() -> Void {
@@ -60,6 +61,24 @@ extension ConverterViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         else
         {
             endCurrencyLabel.text = currencies[row].currencyName
+        }
+    }
+}
+
+extension ConverterViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateLabel(textField: startAmountTextField)
+    }
+    func updateLabel(textField: UITextField) {
+        guard let labelText = startAmountTextField.text else {return}
+        changedAmountLabel.text = labelText
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == startAmountTextField {
+            textField.resignFirstResponder()
+            return true
+        } else {
+            return false
         }
     }
 }

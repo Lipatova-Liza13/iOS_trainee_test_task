@@ -96,7 +96,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="mcV-yO-dVw"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="changedAmountTextField" destination="aSI-6K-HLW" id="D90-1L-DD1"/>
+                        <outlet property="changedAmountLabel" destination="aSI-6K-HLW" id="89Q-ga-dJh"/>
                         <outlet property="endCurrencyLabel" destination="Oao-IG-n3R" id="V3q-6H-Jxh"/>
                         <outlet property="endCurrencyPickerView" destination="x54-7i-NgB" id="umj-dE-BgG"/>
                         <outlet property="startAmountTextField" destination="M9l-nk-nSn" id="jbZ-jw-zyo"/>
