@@ -49,6 +49,28 @@ class ConverterViewController: UIViewController {
             }
         }
     }
+    func amountCheck(_ amountOfCurrency: String) {
+        let validator: Validator = Validator()
+        do {
+            let amountChecked = try validator.amountValidator(amountOfCurrency)
+            changedAmountLabel.text = String(((Double(amountOfCurrency)! * startRate / endRate) * 1000).rounded() / 1000)
+        } catch(let error) {
+            showAlert(for: (error as! ValidationError).message)
+        }
+    }
+    func showAlert(for alert: String) {
+        let alertController = UIAlertController(title: nil, message: alert, preferredStyle: UIAlertController.Style.alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    func updateAmountLabel() {
+        guard let amountOfCurrency = startAmountTextField.text, !amountOfCurrency.isEmpty else {
+            changedAmountLabel.text = ""
+            return
+        }
+        amountCheck(amountOfCurrency)
+    }
     
     //MARK:Design of the screen
     func configureLabelTextField() -> Void {
@@ -84,13 +106,6 @@ extension ConverterViewController: UIPickerViewDelegate, UIPickerViewDataSource 
             endRate = currencies[row].rate
             updateAmountLabel()
         }
-    }
-    func updateAmountLabel() {
-        guard let amountOfCurrency = startAmountTextField.text, !amountOfCurrency.isEmpty else {
-            changedAmountLabel.text = ""
-            return
-        }
-        changedAmountLabel.text = String(((Double(amountOfCurrency)! * startRate / endRate) * 1000).rounded() / 1000)
     }
 }
 
