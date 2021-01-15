@@ -9,6 +9,7 @@ import UIKit
 
 class ConverterViewController: UIViewController {
 
+    //MARK:Properties
     @IBOutlet weak var startCurrencyPickerView: UIPickerView!
     @IBOutlet weak var endCurrencyPickerView: UIPickerView!
     @IBOutlet weak var startCurrencyLabel: UILabel!
@@ -16,6 +17,8 @@ class ConverterViewController: UIViewController {
     @IBOutlet weak var startAmountTextField: UITextField!
     @IBOutlet weak var changedAmountLabel: UILabel!
     var currencies = [Currency]()
+    var startRate: Double = 1
+    var endRate: Double = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,7 @@ class ConverterViewController: UIViewController {
         self.endCurrencyPickerView.delegate = self
         self.endCurrencyPickerView.dataSource = self
         self.startAmountTextField.delegate = self
+        configureLabelTextField()
     }
     
     private func loadFiles() -> Void {
@@ -35,11 +39,25 @@ class ConverterViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.startCurrencyPickerView.reloadAllComponents()
                     self.endCurrencyPickerView.reloadAllComponents()
+                    self.startCurrencyLabel.text = self.currencies[0].currencyName
+                    self.endCurrencyLabel.text = self.currencies[0].currencyName
+                    self.startAmountTextField.text = String(self.startRate)
+                    self.changedAmountLabel.text = String(self.endRate)
                 }
             case .failure(let error):
                 print("The error is: \(error)")
             }
         }
+    }
+    
+    //MARK:Design of the screen
+    func configureLabelTextField() -> Void {
+        startAmountTextField.textAlignment = .right
+        startAmountTextField.layer.borderColor = UIColor.lightGray.cgColor
+        startAmountTextField.layer.borderWidth = 1.0
+        startAmountTextField.layer.cornerRadius = 5
+        changedAmountLabel.textAlignment = .right
+        changedAmountLabel.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
 
@@ -57,21 +75,28 @@ extension ConverterViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         if pickerView == startCurrencyPickerView
         {
             startCurrencyLabel.text = currencies[row].currencyName
+            startRate = currencies[row].rate
+            updateAmountLabel()
         }
         else
         {
             endCurrencyLabel.text = currencies[row].currencyName
+            endRate = currencies[row].rate
+            updateAmountLabel()
         }
+    }
+    func updateAmountLabel() {
+        guard let amountOfCurrency = startAmountTextField.text, !amountOfCurrency.isEmpty else {
+            changedAmountLabel.text = ""
+            return
+        }
+        changedAmountLabel.text = String(((Double(amountOfCurrency)! * startRate / endRate) * 1000).rounded() / 1000)
     }
 }
 
 extension ConverterViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        updateLabel(textField: startAmountTextField)
-    }
-    func updateLabel(textField: UITextField) {
-        guard let labelText = startAmountTextField.text else {return}
-        changedAmountLabel.text = labelText
+        updateAmountLabel()
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == startAmountTextField {

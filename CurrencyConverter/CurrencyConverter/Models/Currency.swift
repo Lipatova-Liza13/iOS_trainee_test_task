@@ -9,7 +9,7 @@ import Foundation
 
 struct Currency: Codable {
     let currencyName: String
-    let rate: Float
+    let rate: Double
     
     enum CodingKeys: String, CodingKey {
         case currencyName = "cc"
